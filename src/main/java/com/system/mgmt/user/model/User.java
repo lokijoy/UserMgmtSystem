@@ -1,16 +1,18 @@
 package com.system.mgmt.user.model;
 
-import lombok.AllArgsConstructor;
+import jakarta.persistence.*;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 /**
  * Model:User.
  */
 @Data
-@AllArgsConstructor
+@Entity
+@Table(name="users")
 public class User {
-    private Long id;
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Long userId;
     private String name;
     private String email;
 }

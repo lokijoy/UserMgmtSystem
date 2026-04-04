@@ -9,7 +9,11 @@
 # 起動方法
 ## Windows(local)
 ### フォルダ移動
-[Clone Directory]UserMgmtSystem
+[Clone Directory]\UserMgmtSystem
+### MySQLコンテナ起動
+```
+docker run --name mysql-test -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=testdb -p 3306:3306 -d mysql:8
+```
 ### Springサーバ実行
 mvnw spring-boot:run
 ### API実行(get)
